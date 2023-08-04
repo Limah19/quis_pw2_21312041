@@ -24,6 +24,18 @@
         print_r($numbers);
         // Lakukan Looping di sini
 
+        
+        foreach ($numbers as $number) {
+            $remainder = $number % 5;
+            $rest[] = $remainder;
+        }
+        
+        echo "array numbers: ";
+        print_r($numbers);
+        
+        echo "array rest: ";
+        print_r($rest);
+        
         // output nya nanti seperti ini --> [3, 0, 4, 1, 2, 4]
 
         echo "<br>";
@@ -53,7 +65,22 @@
             ['003', 'Mouse Genius', 50000, 'Mouse Genius biar lebih pinter', 'genius.jpeg'],
             ['004', 'Mouse Jerry', 30000, 'Mouse yang disukai kucing', 'jerry.jpeg']
         ];
+
         
+        foreach ($items as $item) {
+            $itemAssoc = [
+                'id' => $item[0],
+                'name' => $item[1],
+                'price' => $item[2],
+                'description' => $item[3],
+                'source' => $item[4],
+            ];
+        
+            print_r($itemAssoc);
+            echo "\n";
+        }
+    
+     
         // Output: 
 
     ?>
